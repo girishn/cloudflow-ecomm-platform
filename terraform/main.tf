@@ -20,7 +20,6 @@ provider "aws" {
   }
 }
 
-# Networking Foundation
 module "networking" {
   source = "./modules/networking"
 
