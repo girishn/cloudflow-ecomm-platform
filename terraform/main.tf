@@ -10,7 +10,7 @@ terraform {
 
 provider "aws" {
   region = var.aws_region
-  
+
   default_tags {
     tags = {
       Project     = "CloudFlow"
@@ -23,9 +23,9 @@ provider "aws" {
 # Networking Foundation
 module "networking" {
   source = "./modules/networking"
-  
+
   environment        = var.environment
-  project_name      = var.project_name
-  vpc_cidr          = var.vpc_cidr
+  project_name       = var.project_name
+  vpc_cidr           = var.vpc_cidr
   availability_zones = var.availability_zones
 }
